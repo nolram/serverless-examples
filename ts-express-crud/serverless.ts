@@ -21,7 +21,7 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: 'aws',
     runtime: 'nodejs12.x',
-    profile: 'devops-southsystem',
+    profile: 'test-serverless',
     region: 'us-east-1',
     apiGateway: {
       minimumCompressionSize: 1024,
