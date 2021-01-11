@@ -8,8 +8,8 @@ export class EventBridgeConnection{
         if (process.env.IS_OFFLINE === 'true') {
             this.eventBridge = new EventBridge({
                 endpoint: 'http://127.0.0.1:4010',
-                accessKeyId: "AKIAJFEMLGBRJCVVVSJA",
-                secretAccessKey: "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",
+                accessKeyId: "xxxxxx",
+                secretAccessKey: "xxxxxxxxxx",
                 region: "us-east-1"
             })
         }else{
