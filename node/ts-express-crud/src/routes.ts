@@ -4,7 +4,7 @@ import express, { Request, Response } from 'express';
 
 import { UserRepository } from './app/services/users/UserRepository';
 
-import { User } from './domain/entities/users';
+import { User } from './domain/entities/user';
 
 const router = express.Router();
 
