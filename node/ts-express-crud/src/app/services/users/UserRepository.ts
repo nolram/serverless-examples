@@ -1,4 +1,4 @@
-import { User } from '../../../domain/entities/users';
+import { User } from '../../../domain/entities/user';
 import { AccountTypes } from '../../../domain/enum/types';
 
 import { v1 } from 'uuid';
