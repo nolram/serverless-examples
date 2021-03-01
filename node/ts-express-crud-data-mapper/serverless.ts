@@ -19,7 +19,6 @@ const serverlessConfiguration: AWS = {
   },
   // Add the serverless-webpack plugin
   plugins: ['serverless-webpack', 'serverless-dynamodb-local', 'serverless-offline'],
-  // plugins: ['serverless-webpack', 'serverless-offline'],
   provider: {
     name: 'aws',
     runtime: 'nodejs12.x',
@@ -122,7 +121,7 @@ const serverlessConfiguration: AWS = {
   },
   resources: {
     Resources: {
-      UsersDynamoDBTable: {
+      DynamoDBTable: {
         Type: "AWS::DynamoDB::Table",
         Properties: {
           KeySchema: [
@@ -144,9 +143,12 @@ const serverlessConfiguration: AWS = {
               Projection: {
                 ProjectionType: 'ALL',
               },
+              ProvisionedThroughput: {
+                ReadCapacityUnits: 5,
+                WriteCapacityUnits: 5
+              }
             },
           ],
-          BillingMode: 'PAY_PER_REQUEST',
           ProvisionedThroughput: {
             ReadCapacityUnits: 5,
             WriteCapacityUnits: 5
